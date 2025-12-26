@@ -230,7 +230,7 @@ h1 {
   color: var(--main-color);
   font-size: 4rem;
 }
-@media screen and (max-width: 1285px) {
+@media (max-width: 600px) {
   #menu-icon {
     display: block;
     color: var(--main-color);
