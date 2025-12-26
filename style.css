@@ -29,7 +29,10 @@ section {
   text-align: center;
   margin-bottom: 2rem;
 }
-.nav-bar {
+#menu-icon {
+  display: none;
+}
+.header {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   font-size: 1.45rem;
@@ -134,33 +137,32 @@ footer {
   background: linear-gradient(
     to bottom,
     var(--bg-color),
-    var(--second-bg-color));
-    padding:50px;
+    var(--second-bg-color)
+  );
+  padding: 50px;
 }
 footer ul {
   text-decoration: none;
   text-align: center;
   flex-direction: row;
-  display: flex;  
+  display: flex;
   margin-bottom: 20px;
-  justify-content:center; 
+  justify-content: center;
   gap: 2rem;
-
 }
 footer li {
   list-style-type: none;
   gap: 2rem;
   text-align: center;
   font-weight: 900;
-
 }
 footer li a {
   text-decoration: none;
   color: gold;
   font-size: 30px;
 }
-footer p{
-  font-size: 25px ;
+footer p {
+  font-size: 25px;
   text-align: center;
 }
 ::-webkit-scrollbar {
@@ -228,9 +230,35 @@ h1 {
   color: var(--main-color);
   font-size: 4rem;
 }
-@media screen and (max-width: 1025px) {
-  .nav-bar {
+@media screen and (max-width: 1285px) {
+  #menu-icon {
+    display: block;
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-right: 2rem;
+  }
+  .nav-links {
+    /* width: 50%; */
+    border-left: 2px var(--main-color) solid;
+    border-bottom: 2px var(--main-color) solid;
     display: none;
+    position: absolute;
+    top: 100%;
+    right: -15%;
+    width: 50%;
+    background-color: black;
+    border-bottom-left-radius: 2rem;
+  }
+   .nav-links.active{
+    display: block;
+  }
+  .nav-links li {
+    font-size: 2rem;
+    margin: 2rem;
+  }
+  .nav-links a:hover {
+    color: #b5a8d5;
+    font-size: 2rem;
   }
   .about {
     display: flex;
@@ -252,7 +280,7 @@ h1 {
   .contact form {
     flex-direction: column;
   }
-  footer ul{
+  footer ul {
     flex-direction: column;
   }
 }
