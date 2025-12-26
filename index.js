@@ -1,0 +1,7 @@
+let menuIcon = document.querySelector("#menu-icon");
+let navLinks = document.querySelector(".nav-links");
+
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("bx-x");
+  navLinks.classList.toggle("active");
+};
